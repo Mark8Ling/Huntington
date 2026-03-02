@@ -23,5 +23,4 @@ def run_correlation_engine(master_df: pd.DataFrame, macro_columns: list, etf_col
         generate_json_config(macro_transformations, file_name='macro_transformations')
         generate_json_config(etf_transformations, file_name='etf_transformations')
 
-    print(optimal_lags)
     return optimal_lags

@@ -1,0 +1,30 @@
+AI summary
+    We are building a linear regression model to predict the monthly closing price of the XLE energy ETF using macroeconomic variables (PCEPI, GDP, UNRATE, FEDFUNDS, MCOILWTICO). Data is processed via a configurable pipeline (master_table) that handles reading, optional interpolation, MoM % changes, and per-variable lags. Regression predictors are aligned after shifting, and performance is evaluated with MSE and R². Key observations: applying MoM or excessive lags can worsen performance, WTI (MCOILWTICO) intuitively should be predictive but its effect is dampened by scaling, MoM, and multicollinearity, and small lags (0–1 months) plus proper scaling generally give more stable models.
+
+    We are building a linear regression model to predict the monthly closing price of the eleven sectors of the s&p500. We have a linear regression and time series analysis model programmed and have started learning about the violations of quantitive models. Additionally, we have started studying OSL and ANOVA output models, seeing how things like t and f statistics can provide insight on what variables provide value.
+    We have implemented PCA, optimized macro lead, and have made the macro variables stationary by using log difference 
+    and ETF through percent change. 
+
+
+Clean up repositroy, code, and workflow
+
+Also- I def wanna develop a front end eventually. Thoughts on this? Maybe 1-2 weeks
+
+
+
+Week four thoughts
+General
+    Spurious regression gives r^2 a high score. In english- Both macros and ETFs trend in the same direction
+    If we remove the trend, aka make enforce the data to be stationary...
+    
+    For making the data stationary, we see this drop significantly. When we do this, the question changes to
+    "Can macro variables published this month explain how much this ETF moves this month?" To which the answer is
+    no, because of the efficient market hypothesis, https://en.wikipedia.org/wiki/Efficient-market_hypothesis
+
+    For monthly returns, I feel like instead of macros a better approach would be earning reports and geopolotical
+    events. Instead of trying to disprove EMH, I think it is best to predict directional regime 
+    (is this sector likely to outperform or underperform next month?). A simple classification model that predicts
+    if this ETF will do better or worse than last month based on macro data. 
+
+    Another thing to experiment with is how the prediction changes if based on where training data stops and
+    test data starts. ie) 

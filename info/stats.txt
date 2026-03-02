@@ -1,4 +1,48 @@
 MSE- mean squared error measures the average difference between the predicted and actual values
 R2- coefficient determination measures how much variation in the target variable (in our case ETF prices) is 
-    explained by the model. 1 is a perfect fit and 0 means no explanation. So for Monthly measurements and three
-    month lag, our variables account for 76% of the variation
+    explained by the model. 1 is a perfect fit and 0 means no explanation. 
+
+T statistic
+    Z-score = (x - 𝓊) / 𝜎, calcualtes how many STDEV one value is away from the population.
+        Example) Class averages, x = 90, average is a 75, and std = 5, z-score is 3.0, meaning you did three std from the average
+        Single vallue comapred to the population
+
+    Z-statistic = (Ẋ - 𝓊) / (𝜎/sqrt(n)), used for a greater popoulation, like your class comapred to all sections.
+        Often hard to calculate since it requires lots of data. Getting the university average for a class is difficult.
+        Sample mean compared to the population
+
+    T-statistic = (Ẋ - 𝓊) / (s/sqrt(n)), where s is the standard deviation of a sample.
+        Used when you do not know the population standard deviation. Instead, it uses the STD of your sample.
+        Tells you if a single variable is statistically significant. 
+
+        For our project, this measures how extreme is this coefficient to the noise. T-statistic = (B1 - 0 / SE(B1))
+            We test aganist zero, since 0 implies no effect on the model.
+            SE is standard error of coefficents. 
+                Small SE → coefficient is estimated very precisely
+                Large SE → coefficient is unstable / noisy
+        A large T value implies significant coefficient
+    
+    Src: https://www.youtube.com/watch?v=DEkPZv5ppHI
+
+F statisitc
+    Similar to how a  T-test tells you if a single variable is statistically significant, the F statistic
+    defines wheather a group of variables is statisitcally significant. It compares explained variance to unexplained variance
+
+P value
+    The probailty you would get a certain result by chance. If small, then the result is unlikley to happen by chance.
+    If large, it could easily happen by chance. The common cutoff is p < 0.05, which measn less than 5% the result happened by chance.
+
+
+Null hypothesis
+    The claim that no relationship exists. In our case, a confirmed null hypothesis would be if all the coefficients are zero.
+    We say the "null hypothesis is rejected" if we prove that a relationship exists and coefficients have value.  
+    
+    It is used with the P value, typically if P < 0.05, the results are significant (meaning we have 95% confidence that the independent and dependent 
+    variables have a relationship.)
+
+    Example) Null hypothesis(H0): Studying has no effect on exam scores studying coefficient = 0. 
+            Alternatively(H1): Studying does have an effect on exam scores. 
+            If we do a simple linear regression with dependent variable being exam scores and independent variable being 
+            hours studied, chances are p < 0.05 and we can conclude studying improves exam scores. 
+
+Granger casuality

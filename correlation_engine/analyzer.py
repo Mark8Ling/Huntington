@@ -38,7 +38,7 @@ def compute_lagged_correlations(chunked_df: list[pd.DataFrame], macro_columns: l
             combined = pd.concat([shifted_macro_df, temp_etf_df], axis=1)
             corr_matrix = combined.corr()
             curr_corr_matrix = corr_matrix.loc[macro_columns, etf_columns]
-            print(curr_corr_matrix)
+            # print(curr_corr_matrix)
 
             # Fixed this part
             mask = abs(curr_corr_matrix) > abs(best_corr_matrix)
@@ -56,7 +56,7 @@ def compute_lagged_correlations(chunked_df: list[pd.DataFrame], macro_columns: l
                     all_window_lags[etf][macro].append(int(best_lag))
                 else: # no statistically significant correlation
                     all_window_lags[etf][macro].append(None)
-    print(all_window_lags)
+    # print(all_window_lags)
     return all_window_lags
 
 from collections import Counter

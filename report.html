@@ -1,0 +1,1459 @@
+
+    <html>
+    <head>
+        <title>ETF Macro Regression Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin-top: 40px;
+            }
+
+            h3 {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-bottom: 30px;
+                font-size: 12px;
+                width: auto;
+                max-width: 900px;
+            }
+
+            th, td {
+                border: 1px solid #ccc;
+                padding: 4px 6px;
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            th {
+                background-color: #f2f2f2;
+                font-weight: 600;
+            }
+
+            hr {
+                margin: 50px 0;
+            }
+
+            .container {
+                max-width: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>ETF Macro Regression Report</h1>
+    <hr><h2>XLU</h2><p><strong>Name:</strong> Utilities Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu</a></p><h3>Top Holdings</h3><ul><li>NextEra Energy 13.5%</li><li>Southern Co 7.23%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLU_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.109</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.084</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   4.378</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th> <td>0.000874</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:36</td>     <th>  Log-Likelihood:    </th> <td>  334.73</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   185</td>      <th>  AIC:               </th> <td>  -657.5</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   179</td>      <th>  BIC:               </th> <td>  -638.1</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0094</td> <td>    0.005</td> <td>   -1.751</td> <td> 0.082</td> <td>   -0.020</td> <td>    0.001</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    5.7435</td> <td>    1.470</td> <td>    3.908</td> <td> 0.000</td> <td>    2.844</td> <td>    8.643</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>    0.0388</td> <td>    0.036</td> <td>    1.075</td> <td> 0.284</td> <td>   -0.032</td> <td>    0.110</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -2.1432</td> <td>    1.451</td> <td>   -1.477</td> <td> 0.141</td> <td>   -5.006</td> <td>    0.720</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>   -0.0854</td> <td>    0.119</td> <td>   -0.715</td> <td> 0.476</td> <td>   -0.321</td> <td>    0.150</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>   -0.0179</td> <td>    0.021</td> <td>   -0.854</td> <td> 0.394</td> <td>   -0.059</td> <td>    0.023</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>12.424</td> <th>  Durbin-Watson:     </th> <td>   1.948</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.002</td> <th>  Jarque-Bera (JB):  </th> <td>  13.188</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.569</td> <th>  Prob(JB):          </th> <td> 0.00137</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.646</td> <th>  Cond. No.          </th> <td>    577.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0279</td>
+      <td>0.0279</td>
+      <td>17.1916</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0017</td>
+      <td>0.0017</td>
+      <td>1.0206</td>
+      <td>0.3138</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0041</td>
+      <td>0.0041</td>
+      <td>2.4990</td>
+      <td>0.1157</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0007</td>
+      <td>0.0007</td>
+      <td>0.4515</td>
+      <td>0.5025</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0012</td>
+      <td>0.0012</td>
+      <td>0.7291</td>
+      <td>0.3943</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>179.0000</td>
+      <td>0.2905</td>
+      <td>0.0016</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 0.88)</li><li>MCOILWTICO: Lag 8 (Stability: 0.67)</li><li>FEDFUNDS: Lag 8 (Stability: 0.60)</li></ul><hr><h2>XLC</h2><p><strong>Name:</strong> Communication Services Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-communication-services-select-sector-spdr-etf-xlc' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-communication-services-select-sector-spdr-etf-xlc</a></p><h3>Top Holdings</h3><ul><li>Meta Platforms 19.84%</li><li>Alphabet Class A 10.78%</li><li>Alphabet Class C 8.62%</li><li>Verizon </li><li>AT&T </li><li>T-Mobile </li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLC_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.542</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.288</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   2.132</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th>  <td> 0.153</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:36</td>     <th>  Log-Likelihood:    </th> <td>  29.217</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>    15</td>      <th>  AIC:               </th> <td>  -46.43</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>     9</td>      <th>  BIC:               </th> <td>  -42.19</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>    0.0421</td> <td>    0.050</td> <td>    0.841</td> <td> 0.422</td> <td>   -0.071</td> <td>    0.155</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>  -22.0294</td> <td>   13.695</td> <td>   -1.609</td> <td> 0.142</td> <td>  -53.010</td> <td>    8.951</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>   -0.4196</td> <td>    0.357</td> <td>   -1.174</td> <td> 0.270</td> <td>   -1.228</td> <td>    0.389</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   26.4739</td> <td>   14.469</td> <td>    1.830</td> <td> 0.101</td> <td>   -6.256</td> <td>   59.204</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.0070</td> <td>    0.460</td> <td>    0.015</td> <td> 0.988</td> <td>   -1.035</td> <td>    1.049</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>    0.3964</td> <td>    0.307</td> <td>    1.290</td> <td> 0.229</td> <td>   -0.299</td> <td>    1.092</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 1.977</td> <th>  Durbin-Watson:     </th> <td>   2.402</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.372</td> <th>  Jarque-Bera (JB):  </th> <td>   1.197</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.682</td> <th>  Prob(JB):          </th> <td>   0.550</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 2.770</td> <th>  Cond. No.          </th> <td>1.39e+03</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.39e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0046</td>
+      <td>0.0046</td>
+      <td>2.2961</td>
+      <td>0.1640</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0055</td>
+      <td>0.0055</td>
+      <td>2.7500</td>
+      <td>0.1316</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0076</td>
+      <td>0.0076</td>
+      <td>3.8085</td>
+      <td>0.0828</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0003</td>
+      <td>0.0003</td>
+      <td>0.1425</td>
+      <td>0.7145</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0033</td>
+      <td>0.0033</td>
+      <td>1.6644</td>
+      <td>0.2292</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>9.0000</td>
+      <td>0.0179</td>
+      <td>0.0020</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 5 (Stability: 1.00)</li><li>MCOILWTICO: Lag 11 (Stability: 1.00)</li><li>PCEPI: Lag 4 (Stability: 0.50)</li><li>UNRATE: Lag 7 (Stability: 0.50)</li><li>FEDFUNDS: Lag 3 (Stability: 0.50)</li></ul><hr><h2>XLY</h2><p><strong>Name:</strong> Consumer Discretionary Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly</a></p><h3>Top Holdings</h3><ul><li>Amazon 21%</li><li>Tesla 19.6%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLY_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.158</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.135</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   6.829</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th> <td>7.30e-06</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:37</td>     <th>  Log-Likelihood:    </th> <td>  303.65</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   188</td>      <th>  AIC:               </th> <td>  -595.3</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   182</td>      <th>  BIC:               </th> <td>  -575.9</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>    0.0022</td> <td>    0.007</td> <td>    0.314</td> <td> 0.754</td> <td>   -0.011</td> <td>    0.016</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    5.1653</td> <td>    1.740</td> <td>    2.969</td> <td> 0.003</td> <td>    1.733</td> <td>    8.598</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>   -0.0076</td> <td>    0.043</td> <td>   -0.175</td> <td> 0.861</td> <td>   -0.093</td> <td>    0.078</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -6.1757</td> <td>    1.621</td> <td>   -3.809</td> <td> 0.000</td> <td>   -9.375</td> <td>   -2.977</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.2654</td> <td>    0.137</td> <td>    1.937</td> <td> 0.054</td> <td>   -0.005</td> <td>    0.536</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>    0.0683</td> <td>    0.024</td> <td>    2.883</td> <td> 0.004</td> <td>    0.022</td> <td>    0.115</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 1.312</td> <th>  Durbin-Watson:     </th> <td>   1.992</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.519</td> <th>  Jarque-Bera (JB):  </th> <td>   0.980</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.153</td> <th>  Prob(JB):          </th> <td>   0.613</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.179</td> <th>  Cond. No.          </th> <td>    503.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0237</td>
+      <td>0.0237</td>
+      <td>9.9141</td>
+      <td>0.0019</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0003</td>
+      <td>0.0003</td>
+      <td>0.1350</td>
+      <td>0.7137</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0313</td>
+      <td>0.0313</td>
+      <td>13.1007</td>
+      <td>0.0004</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0064</td>
+      <td>0.0064</td>
+      <td>2.6835</td>
+      <td>0.1031</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0199</td>
+      <td>0.0199</td>
+      <td>8.3118</td>
+      <td>0.0044</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>182.0000</td>
+      <td>0.4353</td>
+      <td>0.0024</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 0.80)</li><li>MCOILWTICO: Lag 1 (Stability: 0.60)</li><li>PCEPI: Lag 4 (Stability: 0.50)</li><li>UNRATE: Lag 5 (Stability: 0.50)</li><li>FEDFUNDS: Lag 2 (Stability: 0.80)</li></ul><hr><h2>XLF</h2><p><strong>Name:</strong> Financial Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-financial-select-sector-spdr-etf-xlf' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-financial-select-sector-spdr-etf-xlf</a></p><h3>Top Holdings</h3><ul><li>Berkshire Hathaway 12.20%</li><li>JPMorgan 11.12%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLF_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.117</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.092</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   4.766</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th> <td>0.000409</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:37</td>     <th>  Log-Likelihood:    </th> <td>  265.00</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   186</td>      <th>  AIC:               </th> <td>  -518.0</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   180</td>      <th>  BIC:               </th> <td>  -498.7</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0218</td> <td>    0.008</td> <td>   -2.757</td> <td> 0.006</td> <td>   -0.037</td> <td>   -0.006</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    7.5396</td> <td>    2.096</td> <td>    3.597</td> <td> 0.000</td> <td>    3.404</td> <td>   11.675</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>   -0.1344</td> <td>    0.050</td> <td>   -2.670</td> <td> 0.008</td> <td>   -0.234</td> <td>   -0.035</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>    0.3136</td> <td>    2.158</td> <td>    0.145</td> <td> 0.885</td> <td>   -3.944</td> <td>    4.572</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.1369</td> <td>    0.169</td> <td>    0.810</td> <td> 0.419</td> <td>   -0.196</td> <td>    0.470</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>    0.0012</td> <td>    0.030</td> <td>    0.039</td> <td> 0.969</td> <td>   -0.059</td> <td>    0.061</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>12.652</td> <th>  Durbin-Watson:     </th> <td>   1.868</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.002</td> <th>  Jarque-Bera (JB):  </th> <td>  27.971</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.220</td> <th>  Prob(JB):          </th> <td>8.44e-07</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 4.848</td> <th>  Cond. No.          </th> <td>    559.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0535</td>
+      <td>0.0535</td>
+      <td>15.2778</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0275</td>
+      <td>0.0275</td>
+      <td>7.8558</td>
+      <td>0.0056</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0001</td>
+      <td>0.0001</td>
+      <td>0.0210</td>
+      <td>0.8851</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0024</td>
+      <td>0.0024</td>
+      <td>0.6728</td>
+      <td>0.4132</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0015</td>
+      <td>0.9688</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>180.0000</td>
+      <td>0.6302</td>
+      <td>0.0035</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 0.50)</li><li>MCOILWTICO: Lag 7 (Stability: 0.67)</li><li>UNRATE: Lag 5 (Stability: 0.50)</li></ul><hr><h2>XLP</h2><p><strong>Name:</strong> Consumer Staples Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-staples-select-sector-spdr-etf-xlp' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-staples-select-sector-spdr-etf-xlp</a></p><h3>Top Holdings</h3><ul><li>Walmart 11.3%</li><li>Costco 9%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLP_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.084</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.058</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   3.293</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th>  <td>0.00718</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:38</td>     <th>  Log-Likelihood:    </th> <td>  377.88</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   186</td>      <th>  AIC:               </th> <td>  -743.8</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   180</td>      <th>  BIC:               </th> <td>  -724.4</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>    0.0028</td> <td>    0.005</td> <td>    0.600</td> <td> 0.550</td> <td>   -0.006</td> <td>    0.012</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    1.7806</td> <td>    1.168</td> <td>    1.525</td> <td> 0.129</td> <td>   -0.524</td> <td>    4.085</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>    0.0197</td> <td>    0.029</td> <td>    0.681</td> <td> 0.496</td> <td>   -0.037</td> <td>    0.077</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -0.8267</td> <td>    1.093</td> <td>   -0.757</td> <td> 0.450</td> <td>   -2.983</td> <td>    1.329</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>   -0.1109</td> <td>    0.096</td> <td>   -1.158</td> <td> 0.249</td> <td>   -0.300</td> <td>    0.078</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>    0.0272</td> <td>    0.016</td> <td>    1.711</td> <td> 0.089</td> <td>   -0.004</td> <td>    0.059</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 9.649</td> <th>  Durbin-Watson:     </th> <td>   2.128</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.008</td> <th>  Jarque-Bera (JB):  </th> <td>   9.822</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.485</td> <th>  Prob(JB):          </th> <td> 0.00736</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.572</td> <th>  Cond. No.          </th> <td>    506.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0098</td>
+      <td>0.0098</td>
+      <td>9.3857</td>
+      <td>0.0025</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0008</td>
+      <td>0.0008</td>
+      <td>0.7525</td>
+      <td>0.3868</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0013</td>
+      <td>0.0013</td>
+      <td>1.2827</td>
+      <td>0.2589</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0022</td>
+      <td>0.0022</td>
+      <td>2.1177</td>
+      <td>0.1473</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0030</td>
+      <td>0.0030</td>
+      <td>2.9272</td>
+      <td>0.0888</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>180.0000</td>
+      <td>0.1872</td>
+      <td>0.0010</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 0.71)</li><li>MCOILWTICO: Lag 1 (Stability: 0.50)</li><li>PCEPI: Lag 7 (Stability: 0.50)</li><li>FEDFUNDS: Lag 2 (Stability: 0.67)</li></ul><hr><h2>XLE</h2><p><strong>Name:</strong> Energy Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle</a></p><h3>Top Holdings</h3><ul><li>Exxon Mobil 24%</li><li>Chevron 17%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLE_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.168</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.145</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   7.191</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th> <td>3.73e-06</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:39</td>     <th>  Log-Likelihood:    </th> <td>  264.48</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   184</td>      <th>  AIC:               </th> <td>  -517.0</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   178</td>      <th>  BIC:               </th> <td>  -497.7</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0140</td> <td>    0.009</td> <td>   -1.636</td> <td> 0.104</td> <td>   -0.031</td> <td>    0.003</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    5.7676</td> <td>    2.043</td> <td>    2.824</td> <td> 0.005</td> <td>    1.737</td> <td>    9.798</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>    0.1906</td> <td>    0.052</td> <td>    3.694</td> <td> 0.000</td> <td>    0.089</td> <td>    0.292</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>    2.2410</td> <td>    1.932</td> <td>    1.160</td> <td> 0.248</td> <td>   -1.571</td> <td>    6.053</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.1487</td> <td>    0.174</td> <td>    0.855</td> <td> 0.394</td> <td>   -0.195</td> <td>    0.492</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>    0.0228</td> <td>    0.030</td> <td>    0.756</td> <td> 0.451</td> <td>   -0.037</td> <td>    0.083</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 0.440</td> <th>  Durbin-Watson:     </th> <td>   2.464</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.803</td> <th>  Jarque-Bera (JB):  </th> <td>   0.186</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.031</td> <th>  Prob(JB):          </th> <td>   0.911</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.143</td> <th>  Cond. No.          </th> <td>    483.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0636</td>
+      <td>0.0636</td>
+      <td>18.6343</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0517</td>
+      <td>0.0517</td>
+      <td>15.1239</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0039</td>
+      <td>0.0039</td>
+      <td>1.1531</td>
+      <td>0.2843</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0016</td>
+      <td>0.0016</td>
+      <td>0.4718</td>
+      <td>0.4931</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0019</td>
+      <td>0.0019</td>
+      <td>0.5709</td>
+      <td>0.4509</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>178.0000</td>
+      <td>0.6079</td>
+      <td>0.0034</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 0.70)</li><li>PCEPI: Lag 10 (Stability: 0.50)</li><li>UNRATE: Lag 5 (Stability: 0.62)</li><li>FEDFUNDS: Lag 7 (Stability: 0.50)</li></ul><hr><h2>XLRE</h2><p><strong>Name:</strong> Real Estate Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-real-estate-select-sector-spdr-etf-xlre' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-real-estate-select-sector-spdr-etf-xlre</a></p><h3>Top Holdings</h3><ul><li>Welltower 10.46%</li><li>Prologis 9.52%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLRE_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.067</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>  -0.070</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>  0.4869</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th>  <td> 0.784</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:39</td>     <th>  Log-Likelihood:    </th> <td>  74.271</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>    40</td>      <th>  AIC:               </th> <td>  -136.5</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    34</td>      <th>  BIC:               </th> <td>  -126.4</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>    0.0112</td> <td>    0.027</td> <td>    0.410</td> <td> 0.685</td> <td>   -0.044</td> <td>    0.067</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>   -0.4867</td> <td>    6.612</td> <td>   -0.074</td> <td> 0.942</td> <td>  -13.923</td> <td>   12.950</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>   -0.1044</td> <td>    0.089</td> <td>   -1.173</td> <td> 0.249</td> <td>   -0.285</td> <td>    0.076</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -0.1491</td> <td>    6.353</td> <td>   -0.023</td> <td> 0.981</td> <td>  -13.061</td> <td>   12.762</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.1270</td> <td>    0.246</td> <td>    0.516</td> <td> 0.609</td> <td>   -0.373</td> <td>    0.627</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>   -0.0099</td> <td>    0.056</td> <td>   -0.176</td> <td> 0.861</td> <td>   -0.124</td> <td>    0.104</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 1.515</td> <th>  Durbin-Watson:     </th> <td>   2.454</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.469</td> <th>  Jarque-Bera (JB):  </th> <td>   0.630</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.048</td> <th>  Prob(JB):          </th> <td>   0.730</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.607</td> <th>  Cond. No.          </th> <td>1.06e+03</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.06e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0204</td>
+      <td>0.8873</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0035</td>
+      <td>0.0035</td>
+      <td>2.0653</td>
+      <td>0.1598</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0158</td>
+      <td>0.9007</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0005</td>
+      <td>0.0005</td>
+      <td>0.3017</td>
+      <td>0.5864</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0001</td>
+      <td>0.0001</td>
+      <td>0.0311</td>
+      <td>0.8610</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>34.0000</td>
+      <td>0.0571</td>
+      <td>0.0017</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>MCOILWTICO: Lag 7 (Stability: 0.50)</li><li>PCEPI: Lag 6 (Stability: 0.67)</li></ul><hr><h2>XLI</h2><p><strong>Name:</strong> Industrial Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-industrial-select-sector-spdr-etf-xli' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-industrial-select-sector-spdr-etf-xli</a></p><h3>Top Holdings</h3><ul><li>General Electric 6.72%</li><li>Caterpillar 6.66%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLI_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.157</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.134</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   6.765</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th> <td>8.27e-06</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:40</td>     <th>  Log-Likelihood:    </th> <td>  299.32</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   188</td>      <th>  AIC:               </th> <td>  -586.6</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   182</td>      <th>  BIC:               </th> <td>  -567.2</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0098</td> <td>    0.007</td> <td>   -1.410</td> <td> 0.160</td> <td>   -0.024</td> <td>    0.004</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    6.0340</td> <td>    1.818</td> <td>    3.320</td> <td> 0.001</td> <td>    2.448</td> <td>    9.620</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>    0.0246</td> <td>    0.052</td> <td>    0.475</td> <td> 0.636</td> <td>   -0.078</td> <td>    0.127</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -1.1635</td> <td>    2.090</td> <td>   -0.557</td> <td> 0.578</td> <td>   -5.287</td> <td>    2.960</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.2266</td> <td>    0.141</td> <td>    1.606</td> <td> 0.110</td> <td>   -0.052</td> <td>    0.505</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>    0.0824</td> <td>    0.024</td> <td>    3.387</td> <td> 0.001</td> <td>    0.034</td> <td>    0.130</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 6.230</td> <th>  Durbin-Watson:     </th> <td>   1.952</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.044</td> <th>  Jarque-Bera (JB):  </th> <td>   8.770</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.157</td> <th>  Prob(JB):          </th> <td>  0.0125</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 4.010</td> <th>  Cond. No.          </th> <td>    604.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0488</td>
+      <td>0.0488</td>
+      <td>19.4785</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0006</td>
+      <td>0.0006</td>
+      <td>0.2401</td>
+      <td>0.6248</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0029</td>
+      <td>0.0029</td>
+      <td>1.1680</td>
+      <td>0.2812</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0037</td>
+      <td>0.0037</td>
+      <td>1.4629</td>
+      <td>0.2280</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0287</td>
+      <td>0.0287</td>
+      <td>11.4734</td>
+      <td>0.0009</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>182.0000</td>
+      <td>0.4558</td>
+      <td>0.0025</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 0.83)</li><li>MCOILWTICO: Lag 1 (Stability: 0.67)</li><li>UNRATE: Lag 5 (Stability: 0.50)</li><li>FEDFUNDS: Lag 2 (Stability: 0.57)</li></ul><hr><h2>XLV</h2><p><strong>Name:</strong> Health Care Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv</a></p><h3>Top Holdings</h3><ul><li>Eli Lilly 14.3%</li><li>Johnson & Johnson 10.35%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLV_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.053</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.026</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   1.975</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th>  <td>0.0845</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:40</td>     <th>  Log-Likelihood:    </th> <td>  332.41</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   184</td>      <th>  AIC:               </th> <td>  -652.8</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   178</td>      <th>  BIC:               </th> <td>  -633.5</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0062</td> <td>    0.006</td> <td>   -1.113</td> <td> 0.267</td> <td>   -0.017</td> <td>    0.005</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    3.4170</td> <td>    1.429</td> <td>    2.392</td> <td> 0.018</td> <td>    0.598</td> <td>    6.236</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>    0.0027</td> <td>    0.042</td> <td>    0.065</td> <td> 0.948</td> <td>   -0.080</td> <td>    0.086</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>    1.0596</td> <td>    1.682</td> <td>    0.630</td> <td> 0.530</td> <td>   -2.260</td> <td>    4.379</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.1511</td> <td>    0.120</td> <td>    1.258</td> <td> 0.210</td> <td>   -0.086</td> <td>    0.388</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>   -0.0109</td> <td>    0.020</td> <td>   -0.536</td> <td> 0.592</td> <td>   -0.051</td> <td>    0.029</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 5.236</td> <th>  Durbin-Watson:     </th> <td>   1.908</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.073</td> <th>  Jarque-Bera (JB):  </th> <td>   5.254</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.281</td> <th>  Prob(JB):          </th> <td>  0.0723</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.609</td> <th>  Cond. No.          </th> <td>    589.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0112</td>
+      <td>0.0112</td>
+      <td>6.8695</td>
+      <td>0.0095</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0008</td>
+      <td>0.0008</td>
+      <td>0.4824</td>
+      <td>0.4882</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0004</td>
+      <td>0.0004</td>
+      <td>0.2222</td>
+      <td>0.6379</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0033</td>
+      <td>0.0033</td>
+      <td>2.0114</td>
+      <td>0.1579</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0005</td>
+      <td>0.0005</td>
+      <td>0.2877</td>
+      <td>0.5924</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>178.0000</td>
+      <td>0.2905</td>
+      <td>0.0016</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 1.00)</li><li>UNRATE: Lag 5 (Stability: 0.67)</li><li>FEDFUNDS: Lag 9 (Stability: 0.80)</li></ul><hr><h2>XLB</h2><p><strong>Name:</strong> Materials Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-materials-select-sector-spdr-etf-xlb</a></p><h3>Top Holdings</h3><ul><li>Linde 14%</li><li>Newmont 8%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLB_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.155</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.132</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   6.670</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th> <td>9.94e-06</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:41</td>     <th>  Log-Likelihood:    </th> <td>  273.91</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   188</td>      <th>  AIC:               </th> <td>  -535.8</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   182</td>      <th>  BIC:               </th> <td>  -516.4</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0080</td> <td>    0.008</td> <td>   -0.993</td> <td> 0.322</td> <td>   -0.024</td> <td>    0.008</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    8.2973</td> <td>    2.109</td> <td>    3.934</td> <td> 0.000</td> <td>    4.135</td> <td>   12.459</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>    0.0640</td> <td>    0.050</td> <td>    1.273</td> <td> 0.205</td> <td>   -0.035</td> <td>    0.163</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -7.6823</td> <td>    1.925</td> <td>   -3.991</td> <td> 0.000</td> <td>  -11.481</td> <td>   -3.884</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>    0.0573</td> <td>    0.171</td> <td>    0.335</td> <td> 0.738</td> <td>   -0.280</td> <td>    0.395</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>   -0.0492</td> <td>    0.029</td> <td>   -1.696</td> <td> 0.092</td> <td>   -0.106</td> <td>    0.008</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 1.276</td> <th>  Durbin-Watson:     </th> <td>   2.328</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.528</td> <th>  Jarque-Bera (JB):  </th> <td>   0.930</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.050</td> <th>  Prob(JB):          </th> <td>   0.628</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.330</td> <th>  Cond. No.          </th> <td>    528.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0455</td>
+      <td>0.0455</td>
+      <td>13.8757</td>
+      <td>0.0003</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0062</td>
+      <td>0.0062</td>
+      <td>1.8994</td>
+      <td>0.1698</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0466</td>
+      <td>0.0466</td>
+      <td>14.2109</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0016</td>
+      <td>0.0016</td>
+      <td>0.4849</td>
+      <td>0.4871</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0094</td>
+      <td>0.0094</td>
+      <td>2.8772</td>
+      <td>0.0916</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>182.0000</td>
+      <td>0.5973</td>
+      <td>0.0033</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 1.00)</li><li>PCEPI: Lag 4 (Stability: 0.60)</li></ul><hr><h2>XLK</h2><p><strong>Name:</strong> Technology Select Sector SPDR Fund</p><p><strong>Issuer:</strong> State Street Global Advisors</p><p><strong>Official Page:</strong> <a href='https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk' target='_blank'>https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk</a></p><h3>Top Holdings</h3><ul><li>NVIDIA 15.7%</li><li>Apple 13.4%</li></ul><h3>Train/Test Regression Plot</h3><img src="reports/images/XLK_monthly_results.png" style="max-width:100%; height:auto; margin-bottom:30px; border:1px solid #ccc;" /><h3>OLS Regression Results</h3><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.087</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.061</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   3.369</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 28 Feb 2026</td> <th>  Prob (F-statistic):</th>  <td>0.00623</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:49:42</td>     <th>  Log-Likelihood:    </th> <td>  249.89</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   182</td>      <th>  AIC:               </th> <td>  -487.8</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   176</td>      <th>  BIC:               </th> <td>  -468.6</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     5</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td>   -0.0090</td> <td>    0.008</td> <td>   -1.069</td> <td> 0.286</td> <td>   -0.026</td> <td>    0.008</td>
+</tr>
+<tr>
+  <th>GDP</th>        <td>    6.5893</td> <td>    2.116</td> <td>    3.113</td> <td> 0.002</td> <td>    2.413</td> <td>   10.766</td>
+</tr>
+<tr>
+  <th>MCOILWTICO</th> <td>   -0.0126</td> <td>    0.056</td> <td>   -0.225</td> <td> 0.822</td> <td>   -0.123</td> <td>    0.098</td>
+</tr>
+<tr>
+  <th>PCEPI</th>      <td>   -5.4093</td> <td>    2.095</td> <td>   -2.582</td> <td> 0.011</td> <td>   -9.544</td> <td>   -1.274</td>
+</tr>
+<tr>
+  <th>UNRATE</th>     <td>   -0.1334</td> <td>    0.174</td> <td>   -0.768</td> <td> 0.444</td> <td>   -0.476</td> <td>    0.209</td>
+</tr>
+<tr>
+  <th>FEDFUNDS</th>   <td>   -0.0283</td> <td>    0.031</td> <td>   -0.909</td> <td> 0.365</td> <td>   -0.090</td> <td>    0.033</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>14.110</td> <th>  Durbin-Watson:     </th> <td>   1.854</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.001</td> <th>  Jarque-Bera (JB):  </th> <td>  41.515</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.054</td> <th>  Prob(JB):          </th> <td>9.66e-10</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 5.337</td> <th>  Cond. No.          </th> <td>    490.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<h3>ANOVA Table</h3><table class="dataframe compact-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GDP</th>
+      <td>1.0000</td>
+      <td>0.0332</td>
+      <td>0.0332</td>
+      <td>8.5509</td>
+      <td>0.0039</td>
+    </tr>
+    <tr>
+      <th>MCOILWTICO</th>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0080</td>
+      <td>0.9290</td>
+    </tr>
+    <tr>
+      <th>PCEPI</th>
+      <td>1.0000</td>
+      <td>0.0275</td>
+      <td>0.0275</td>
+      <td>7.0660</td>
+      <td>0.0086</td>
+    </tr>
+    <tr>
+      <th>UNRATE</th>
+      <td>1.0000</td>
+      <td>0.0015</td>
+      <td>0.0015</td>
+      <td>0.3956</td>
+      <td>0.5302</td>
+    </tr>
+    <tr>
+      <th>FEDFUNDS</th>
+      <td>1.0000</td>
+      <td>0.0032</td>
+      <td>0.0032</td>
+      <td>0.8256</td>
+      <td>0.3648</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>176.0000</td>
+      <td>0.6839</td>
+      <td>0.0039</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table><h3>Valid Lags Applied</h3><ul><li>GDP: Lag 1 (Stability: 1.00)</li><li>MCOILWTICO: Lag 1 (Stability: 0.50)</li><li>PCEPI: Lag 4 (Stability: 0.67)</li><li>UNRATE: Lag 12 (Stability: 0.50)</li><li>FEDFUNDS: Lag 9 (Stability: 0.50)</li></ul>
+        </div>
+    </body>
+    </html>
+    

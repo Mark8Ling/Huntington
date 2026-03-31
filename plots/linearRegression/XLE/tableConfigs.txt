@@ -1,0 +1,94 @@
+XLI- 
+    TABLE_CONFIG = {
+        "INDPRO": {
+            "path": "data/raw_data/INDPRO.csv",
+            "pipeline": ["read", "log_diff"],
+            "shift": 1
+        },
+        "GS10": {
+            "path": "data/raw_data/GS10.csv",
+            "pipeline": ["read", "diff"],
+            "shift": 0
+        }
+    }
+
+XLV- 
+    TABLE_CONFIG = {
+        "GDP": {
+            "path": "data/raw_data/GDP.csv",
+            "pipeline": ["read", "interpolate_monthly", "log_diff"],
+            "shift": 0
+        },
+        "UNRATE": {
+            "path": "data/raw_data/UNRATE.csv",
+            "pipeline": ["read", "log_diff"],
+            "shift": 0
+        },
+        "FEDFUNDS": {
+            "path": "data/raw_data/FEDFUNDS.csv",
+            "pipeline": ["read"], 
+            "shift": 0
+        }
+    }
+
+XLF
+     TABLE_CONFIG = {
+        "GDP": {
+            "path": "data/raw_data/GDP.csv",
+            "pipeline": ["read", "interpolate_monthly", "log_diff"],
+            "shift": 0
+        },
+        "GS10": {
+            "path": "data/raw_data/GS10.csv",
+            "pipeline": ["read", "log_diff"],
+            "shift": 0
+        },
+        "FEDFUNDS": {
+            "path": "data/raw_data/FEDFUNDS.csv",
+            "pipeline": ["read", 'diff'], 
+            "shift": 0
+        },
+        "MCOILWTICO": {
+            "path": "data/raw_data/MCOILWTICO.csv",
+            "pipeline": ["read", "log_diff"],
+            "shift": 0
+        }
+     }
+
+XLY- 
+    TABLE_CONFIG = {
+        "GDP": {
+            "path": "data/raw_data/GDP.csv",
+            "pipeline": ["read", "interpolate_monthly", "log_diff"],
+            "shift": 0
+        },
+        "GS10": {
+            "path": "data/raw_data/GS10.csv",
+            "pipeline": ["read", "log_diff"],
+            "shift": 0
+        },
+        "UNRATE": {
+            "path": "data/raw_data/UNRATE.csv",
+            "pipeline": ["read", "diff"],
+            "shift": 1
+        },
+     }
+
+XLP-
+    TABLE_CONFIG = {
+        "GDP": {
+            "path": "data/raw_data/GDP.csv",
+            "pipeline": ["read", "interpolate_monthly", "log_diff"],
+            "shift": 0
+        },
+        "GS10": {
+            "path": "data/raw_data/GS10.csv",
+            "pipeline": ["read", "log_diff"],
+            "shift": 0
+        },
+        "UNRATE": {
+            "path": "data/raw_data/UNRATE.csv",
+            "pipeline": ["read", "diff"],
+            "shift": 1
+        },
+     }

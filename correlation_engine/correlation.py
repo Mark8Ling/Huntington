@@ -1,6 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-import pandas as pd 
+import pandas as pd
+from data_cleanse import * 
 
 
 def correlation(pd, ticker):
@@ -48,19 +49,12 @@ def graph(MACRO, ETF,  ETF_name, MACRO_name):
     plt.show()
 
 
-    
-'''
-ETF = fix_pd('data/cleanedData/XLE_quarterly.csv')
-ETF = ETF['Close']
-MACRO = fix_pd('monthly_master_macro_table.csv')
 
-master_table = MACRO.merge(ETF, on='observation_date', how='left')
+if __name__ == "__main__":
+    ETF = fix_pd('data/cleanedData/XLF_quarterly.csv')
+    ETF = ETF['Close']
+    macro = fix_pd('data/raw_data/FEDFUNDS.csv')
 
-print(master_table.head)
+    graph(macro, ETF, "XLE", "FEDFUNDS")
 
-correlation(master_table, 'XLE')
-
-MACRO_specific = MACRO['PCEPI']
-graph(MACRO_specific, ETF, "XLE", "PCEPI")
-'''
 

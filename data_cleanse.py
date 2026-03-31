@@ -46,6 +46,11 @@ def MoM(df):
     df = df.dropna() # first row will be NaN
     return df
 
+def diff(df):
+    df = df.diff()
+    df = df.dropna()
+    return df
+
 def YoY(df):
     """
     Takes data frame and finds % change from last year

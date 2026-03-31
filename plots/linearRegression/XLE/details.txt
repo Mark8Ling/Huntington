@@ -1,4 +1,24 @@
-Valid lags applied: [('MCOILWTICO', 4, 0.6666666666666666), ('MHHNGSP', 10, 0.6666666666666666), ('DTWEXBGS', 11, 1.0), ('PPIENG', 4, 0.6666666666666666)]
-Correlated Groups: [['MCOILWTICO', 'PPIENG']]
-Out-of-sample R²: 0.1064
-Directional Accuracy: 65.52%
+XLE
+    GDP, MCOILWTICO
+    Out-of-sample R²: 0.1343
+    Directional Accuracy: 61.70%
+
+XLI
+    INDPRO, GS10
+    Out-of-sample R²: 0.0735
+    Directional Accuracy: 65.96%
+ 
+XLV
+    UNRATE, GDP, FEDFUNDS
+    Out-of-sample R²: 0.1114
+    Directional Accuracy: 71.11%
+
+XLF
+    GDP, GS10, FEDFUNDS, MCOILWTICO
+    Out-of-sample R²: 0.1572
+    Directional Accuracy: 71.74%
+
+XLY
+    GDP, GS10, UNRATE
+    Out-of-sample R²: 0.1442
+    Directional Accuracy: 63.84%

@@ -1,0 +1,112 @@
+{
+    "XLK": {
+        "volatility": 0.2582576933569974,
+        "beta": 1.1763903573345849,
+        "holdings_correlation": 0.5288723469964306,
+        "normalized_volatility": 0.7840636344478175,
+        "normalized_beta": 0.17639035733458486,
+        "normalized_correlations": 0.7644361734982152,
+        "risk_score": 0.5978361591239272,
+        "last_updated": "2026-04-19"
+    },
+    "XLV": {
+        "volatility": 0.1777968798873475,
+        "beta": 0.7236042283150247,
+        "holdings_correlation": 0.3912608019602689,
+        "normalized_volatility": 0.2040594844017351,
+        "normalized_beta": 0.2763957716849753,
+        "normalized_correlations": 0.6956304009801344,
+        "risk_score": 0.32407455390238704,
+        "last_updated": "2026-04-19"
+    },
+    "XLF": {
+        "volatility": 0.2842223532564615,
+        "beta": 1.2400818397768698,
+        "holdings_correlation": 0.6234250136430255,
+        "normalized_volatility": 0.9712293786758114,
+        "normalized_beta": 0.2400818397768698,
+        "normalized_correlations": 0.8117125068215127,
+        "risk_score": 0.7199817426352693,
+        "last_updated": "2026-04-19"
+    },
+    "XLY": {
+        "volatility": 0.22712397925544592,
+        "beta": 1.0265533965580875,
+        "holdings_correlation": 0.34687378326171725,
+        "normalized_volatility": 0.5596351611365545,
+        "normalized_beta": 0.026553396558087528,
+        "normalized_correlations": 0.6734368916308586,
+        "risk_score": 0.42247097786187526,
+        "last_updated": "2026-04-19"
+    },
+    "XLP": {
+        "volatility": 0.14948860833604294,
+        "beta": 0.5296590143159863,
+        "holdings_correlation": 0.4715150832655111,
+        "normalized_volatility": 0.0,
+        "normalized_beta": 0.4703409856840137,
+        "normalized_correlations": 0.7357575416327555,
+        "risk_score": 0.2882538040317552,
+        "last_updated": "2026-04-19"
+    },
+    "XLE": {
+        "volatility": 0.2882136359667075,
+        "beta": 0.9951056081643226,
+        "holdings_correlation": 0.6890194051527867,
+        "normalized_volatility": 1.0,
+        "normalized_beta": 0.004894391835677414,
+        "normalized_correlations": 0.8445097025763934,
+        "risk_score": 0.6703702580659818,
+        "last_updated": "2026-04-19"
+    },
+    "XLI": {
+        "volatility": 0.21213060503014947,
+        "beta": 0.9868207917149943,
+        "holdings_correlation": 0.3611021196652261,
+        "normalized_volatility": 0.4515564834650499,
+        "normalized_beta": 0.013179208285005739,
+        "normalized_correlations": 0.680551059832613,
+        "risk_score": 0.36584221618454926,
+        "last_updated": "2026-04-19"
+    },
+    "XLB": {
+        "volatility": 0.2362383494851286,
+        "beta": 0.9864194937542308,
+        "holdings_correlation": 0.4374612680529568,
+        "normalized_volatility": 0.6253366638983002,
+        "normalized_beta": 0.01358050624576923,
+        "normalized_correlations": 0.7187306340264784,
+        "risk_score": 0.4604886106281766,
+        "last_updated": "2026-04-19"
+    },
+    "XLU": {
+        "volatility": 0.1925233286664399,
+        "beta": 0.6117610501042565,
+        "holdings_correlation": 0.48210547934609055,
+        "normalized_volatility": 0.31021590845653396,
+        "normalized_beta": 0.3882389498957435,
+        "normalized_correlations": 0.7410527396730453,
+        "risk_score": 0.4197901871315991,
+        "last_updated": "2026-04-19"
+    },
+    "XLRE": {
+        "volatility": 0.20389172391666777,
+        "beta": 0.7999147687253312,
+        "holdings_correlation": 0.586038525031868,
+        "normalized_volatility": 0.3921651037194792,
+        "normalized_beta": 0.20008523127466882,
+        "normalized_correlations": 0.793019262515934,
+        "risk_score": 0.41471197374532703,
+        "last_updated": "2026-04-19"
+    },
+    "XLC": {
+        "volatility": 0.22322511207391624,
+        "beta": 0.9875827753487318,
+        "holdings_correlation": 0.34999595000179456,
+        "normalized_volatility": 0.5315307298395336,
+        "normalized_beta": 0.012417224651268155,
+        "normalized_correlations": 0.6749979750008973,
+        "risk_score": 0.40449012731532674,
+        "last_updated": "2026-04-19"
+    }
+}

@@ -85,4 +85,4 @@ def aggregate_lags(lagged_correlations: dict) -> dict:
                     "valid_windows": len(not_none_lags)
                 }
                 # print((f"{macro} - Modal Lag: {num}, Frequency: {freq}, Valid Windows: {results[etf][macro]['valid_windows']}"))
-        return results
+    return results

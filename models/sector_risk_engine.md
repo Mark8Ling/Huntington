@@ -5,7 +5,6 @@ The **Sector Risk Engine** is a quantitative model designed to evaluate the over
 
 This model is part of a broader analytics platform that combines statistical modeling, machine learning, and financial theory to generate insights across equity sectors.
 
-
 ## 🎯 Objective
 The goal of the Sector Risk Engine is to:
 * **Quantify** sector-level risk using multiple financial metrics.
@@ -20,13 +19,17 @@ The model evaluates risk across three core dimensions:
 * Measures the variability of ETF returns.
 * Computed as the standard deviation of daily returns.
 * **Annualized using:**
-    $$\sigma_{annual} = \sigma_{daily} \times \sqrt{252}$$
+$$
+\sigma_{annual} = \sigma_{daily} \times \sqrt{252}
+$$
 * **Interpretation:** Higher volatility $\rightarrow$ larger price swings $\rightarrow$ higher risk.
 
 ### 2. Beta (Market Sensitivity)
 * Measures how sensitive the ETF is to overall market movements (S&P 500).
 * **Computed using:**
-    $$\beta = \frac{\mathrm{Cov}(R_{ETF}, R_{S\&P500})}{\mathrm{Var}(R_{S\&P500})}$$
+$$
+\beta = \frac{\mathrm{Cov}(R_{ETF}, R_{S\&P500})}{\mathrm{Var}(R_{S\&P500})}
+$$
 * **Interpretation:** 
     * $\beta > 1$: Etf amplifies, and is more sensitive to market movements (Aggressive).
     * $\beta < 1$: Etf dampens, and is less sensitive to market movements (Defensive).
@@ -47,15 +50,26 @@ The model evaluates risk across three core dimensions:
 To ensure comparability, each metric is transformed onto a $0-1$ scale:
 
 * **Volatility (Min-Max Scaling):**
-    $$\mathrm{norm\_vol} = \frac{vol - \min(vol)}{\max(vol) - \min(vol)}$$
+$$
+\mathrm{norm\_vol} = \frac{vol - \min(vol)}{\max(vol) - \min(vol)}
+$$
+
 * **Beta (Distance from 1):**
-    $$\mathrm{norm\_beta} = \min(|\beta - 1|, 1)$$
+$$
+\mathrm{norm\_beta} = \min(|\beta - 1|, 1)
+$$
+
 * **Holdings Correlation:**
-    $$\mathrm{norm\_corr} = \frac{corr + 1}{2}$$
+$$
+\mathrm{norm\_corr} = \frac{corr + 1}{2}
+$$
+
 ## 🧮 Risk Score Formula
 The final sector risk score is computed as a weighted sum:
 
-$$\mathrm{Risk\ Score} = (0.5 \cdot \mathrm{norm\_vol}) + (0.3 \cdot \mathrm{norm\_beta}) + (0.2 \cdot \mathrm{norm\_corr})$$
+$$
+\mathrm{Risk\ Score} = (0.5 \cdot \mathrm{norm\_vol}) + (0.3 \cdot \mathrm{norm\_beta}) + (0.2 \cdot \mathrm{norm\_corr})
+$$
 
 ### Weighting Rationale:
 * **Volatility (50%):** Primary driver of realized risk.

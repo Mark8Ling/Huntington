@@ -86,10 +86,10 @@ def run_risk_engine(etf_ticker):
                     "last_updated": str(pd.Timestamp.today().date())
                 }
 
-        # store data into json       
+        # store data into json
         cache_manager.save(file_path, sector_risk_data)
             
-        return sector_risk_data[etf_ticker], sector_data
+        return sector_risk_data[etf_ticker], sector_risk_data
         
     else:
         print("Pulling Existing Data")

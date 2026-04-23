@@ -1,4 +1,153 @@
+import os
 import pandas as pd
+from fredapi import Fred
+from dotenv import load_dotenv
+
+class FeatureEngineer():
+    MACRO_PATH = "data/raw_data/macros"
+    ETF_PATH = "data/raw_data/ETFs"
+    
+    All_MACROS = {
+            # Growth
+            "GDP": "GDP",
+            "Industrial_Production": "INDPRO",
+            "Retail_Sales": "RSAFS",
+            "PMI_Proxy": "NAPM",  # ISM PMI
+
+            # Inflation
+            "CPI": "CPIAUCSL",
+            "Core_CPI": "CPILFESL",
+            "PPI": "PPIACO",
+
+            # Rates
+            "Fed_Funds_Rate": "FEDFUNDS",
+            "10Y_Treasury": "GS10",
+            "2Y_Treasury": "GS2",
+
+            # Labor
+            "Unemployment": "UNRATE",
+            "Nonfarm_Payrolls": "PAYEMS",
+
+            # Liquidity
+            "M2": "M2SL",
+            "Financial_Conditions": "NFCI",  # Chicago Fed
+
+            # Consumer
+            "Consumer_Confidence": "UMCSENT",
+            "PCE": "PCE",
+
+            # Commodities (FRED versions)
+            "Oil_WTI": "DCOILWTICO",
+            "Copper": "PCOPPUSDM"
+        }
+    
+    def __init__(self):
+        load_dotenv()
+        self.fred = Fred(os.getenv("FRED_API_KEY"))
+        os.makedirs(self.MACRO_PATH, exist_ok=True)
+
+    def api_key(self):
+        return self.fred
+    def load_data(self, etf_ticker):
+        macro_dfs = []
+
+        # load or fetch macro data
+        for name, macro_ticker in self.All_MACROS.items():
+            file_path = os.path.join(self.MACRO_PATH, f"{name}.csv")
+
+            if os.path.exists(file_path):
+                print("file path exists")
+                df = pd.read_csv(file_path, parse_dates=["Date"], index_col="Date")
+            else:
+                print("file path does not exist")
+                data = self.fred.get_series(macro_ticker)
+
+                df = pd.DataFrame(data, columns=[name])
+                df.index.name = "Date"
+
+                # Normalize to monthly frequency
+                df = df.resample("ME").last()
+
+                df.to_csv(file_path)
+
+            macro_dfs.append(df)
+
+        # merge the macro data
+        print("merging all macros together")
+        macro_df = pd.concat(macro_dfs, axis=1).sort_index()
+
+        # load the etf
+        print("loading etf file")
+        etf_file = os.path.join(
+            self.ETF_PATH, f"{etf_ticker.upper()}_monthly.csv"
+        )
+
+        if not os.path.exists(etf_file):
+            raise FileNotFoundError(f"{etf_file} not found")
+
+        etf_df = pd.read_csv(etf_file, parse_dates=["Date"], index_col="Date")
+
+        etf_df = etf_df[["Close"]].rename(
+            columns={"Close": etf_ticker.upper()}
+        )
+
+        # merge etf + macros
+        df = pd.concat([etf_df, macro_df], axis=1).sort_index()
+
+        # Fill lower-frequency macro gaps (GDP, etc.)
+        df = df.ffill()
+
+        # Drop remaining NaNs
+        df = df.dropna()
+
+        # Add derived features
+        df["Yield_Spread"] = df["10Y_Treasury"] - df["2Y_Treasury"]
+
+        return df
+
+    def apply_lags():
+        pass
+
+    def create_target():
+        pass
+
+    def build_dataset():
+        pass
+
+
+class RandomForestModel():
+    def __init():
+        pass
+
+    def train():
+        pass
+
+    def evaluate():
+        pass
+
+    def predict():
+        pass
+
+    def feature_importance_gini():
+        pass
+
+    def feature_importance_permutation():
+        pass
+
+class ScenarioEngine():
+    def __init__():
+        pass
+    
+    def run_base_case():
+        pass
+
+    def run_predefined_scenarios():
+        pass
+
+    def run_custom_scenario():
+        pass
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,7 +172,7 @@ def run_random_forest(
     
     # Slice df to separate etf and macros
     X = df.iloc[:, 1:] # all macro columns
-    y = df.iloc[:, 0] # etf should be first column of df
+    y = df.iloc[:, 0] # etf should be first column of df TODO make into etf returns
 
     # Split the data (ex: 2000-2004 --> 2000-2005 --> 2000-2006)
     tscv = TimeSeriesSplit(n_splits=15)
